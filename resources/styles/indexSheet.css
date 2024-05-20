@@ -1,0 +1,239 @@
+/*Aqui é aonde estará alocado todas as variaveis desta folha de estilo*/
+:root {
+    --background-color__blue: rgb(0,148,255);
+    --background-color__body: rgb(8, 2, 29);
+    --background-color__body-after: #0c032e; 
+    --background-color__header: #08021d;
+    --background-color__header-image: black;
+    --foreground-color__header-fonts: rgb(192,192,192);
+    --foreground-color__default-fonts: #f2f2f2;
+
+    --header-height: 9rem;
+    --border-radius__px: 20px;
+    --font-size__header: 1.5rem;
+    --font-size__h1: 5rem;
+    --font-size__h2: 4rem;
+    --font-size__h3: 3rem;
+    --font-size__p: 2.5rem;
+    --margin__default: 10rem;
+}
+
+/*setando o font-size do html para melhor codificação do uso de unidade de medidas. */
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* config do background e do body em geral */
+body {
+    height: fit-content;
+    margin: 0;
+    background-color: var(--background-color__body);
+    background-image: url(/resources/images/background-body.png);
+    background-attachment: fixed;
+    background-size: auto;
+}
+
+h1 {font-size: var(--font-size__h1);}
+h2 {font-size: var(--font-size__h2);}
+h3 {font-size: var(--font-size__h3);}
+p {font-size: var(--font-size__p);}
+
+#header-container {
+    position: fixed;
+    top: 0;
+    background: var(--background-color__header);
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1;
+}
+
+#header-container nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#header-container #__btn-home {
+    height: var(--header-height);
+    width: calc(var(--header-height)*2);
+    display: flex;
+}
+
+#header-container #__btn-home img {
+    height: 100%;
+    width: 100%;
+}
+
+#header-container #__btn-home:hover img {
+    height: 101%;
+    width: 101%;
+}
+
+#header-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    height: 80%;
+    border-radius: var(--border-radius__px);
+    gap: calc(var(--font-size__header)*4);
+    transition: background-color .5s linear;
+}
+
+#header-container li img {
+    width: var(--font-size__header);
+    height: var(--font-size__header);
+}
+
+#header-container li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--font-size__header)/4);
+    text-decoration: none;
+    font-size: var(--font-size__header);
+    font-weight: bold;
+    color: var(--foreground-color__header-fonts);
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    padding: calc(var(--font-size__header)*1.25);
+    border-radius: var(--border-radius__px);
+}
+
+#header-container li a:hover {
+    background-color: var(--background-color__blue);
+    color: var(--foreground-color__default-fonts);
+    transition: all .2s linear;
+}
+
+.header-container__nav-scrolled ul {
+    background-color: var(--background-color__body-after);
+}
+
+#main-container {
+    width: 100%;
+    text-align: center;
+    margin-top: var(--header-height);
+    background-color: var(--background-color__header-image);
+}
+
+#main-container #__image-header {
+    width: 125rem;
+}
+
+#main-container div {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 30rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+#main-container div h1 {
+    transition: all .5s linear;
+    font-size: var(--font-size__h1);
+    color: var(--foreground-color__default-fonts);
+    border-left: .5rem solid var(--background-color__blue);
+    padding: 5rem;
+    height: 30rem;
+    min-height: 30rem;
+    text-align: left;
+    text-shadow: .2rem .2rem .2rem black;
+    overflow: auto;
+}
+
+#main-container div a {
+    text-decoration: none;
+    color: var(--foreground-color__default-fonts);
+    text-transform: capitalize;
+    font-size: var(--font-size__p);
+    width: fit-content;
+    padding: var(--font-size__p);
+    border-radius: var(--border-radius__px);
+    border: .2rem solid var(--background-color__blue);
+}
+
+#main-container div a:hover {
+    background-color: var(--background-color__blue);
+    transition: all .2s linear;
+}
+
+.main-container__h1_effect {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+main h1,h2,h3,p {
+    color: var(--foreground-color__default-fonts);
+    text-align: center;
+}
+
+#main-title {
+    margin: auto;
+    right: 0;
+    left: 0;
+    margin-top: calc(var(--margin__default)*2);
+    text-transform: capitalize;
+    border-bottom: .1rem solid var(--background-color__blue);
+    width: 80%;
+    padding-bottom: 1.5rem;
+}
+
+#section-services {
+    margin: auto;
+    right: 0;
+    left: 0;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+#section-services img {
+    width: 30rem;
+    height: 30rem;
+}
+
+#section-services article {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: var(--border-radius__px);
+    transition: all .5s linear;
+}
+
+#section-services article:hover {
+    background-color: rgba(0,148,255,.2);
+}
+
+#section-services article p {
+    color: var(--foreground-color__header-fonts);
+    text-align: left;
+    line-height: 4rem;
+    margin: 0;
+    width: 100%;
+}
+
+#section-services article h2 {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+    border-bottom: .1rem solid var(--background-color__blue);
+}

@@ -1,0 +1,39 @@
+:root {
+    --size-scroll: 1.25rem;
+    --color-background: #f3f3f3;
+    --color-default: rgb(0,148,255);
+    --color-mouse__hover: rgb(5, 102, 172);
+    --color-mouse__click: rgb(4, 78, 131);
+}
+
+/* Codigo pego pego chatgpt */
+::-webkit-scrollbar {
+    width: var(--size-scroll);
+    /* Largura da barra de rolagem */
+}
+
+/* Estilizando a trilha da barra de rolagem (a área onde a barra de rolagem se move) */
+::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+    /* Cor de fundo da trilha - um tom claro para o amarelo */
+}
+
+/* Estilizando o polegar da barra de rolagem (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-default);
+    /* Cor do polegar - amarelo */
+    border-radius: var(--border-radius__px);
+    /* Borda arredondada do polegar */
+}
+
+/* Mudando a aparência quando o usuário está interagindo com a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-mouse__hover);
+    /* Cor do polegar ao passar o mouse - tom mais escuro de amarelo */
+}
+
+/* Mudando a aparência quando a barra de rolagem está ativa (quando está sendo arrastada) */
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-mouse__click);
+    /* Cor do polegar quando ativo - tom mais escuro de amarelo */
+}
