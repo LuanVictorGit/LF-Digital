@@ -27,7 +27,6 @@ html {
 /* config do background e do body em geral */
 body {
     height: fit-content;
-    margin: 0;
     background-color: var(--background-color__body);
     background-image: url(/resources/images/background-body.png);
     background-attachment: fixed;
@@ -144,8 +143,8 @@ p {font-size: var(--font-size__p);}
     color: var(--foreground-color__default-fonts);
     border-left: .5rem solid var(--background-color__blue);
     padding: 5rem;
-    height: 30rem;
-    min-height: 30rem;
+    height: 40rem;
+    min-height: 40rem;
     text-align: left;
     text-shadow: .2rem .2rem .2rem black;
     overflow: auto;
@@ -160,6 +159,7 @@ p {font-size: var(--font-size__p);}
     padding: var(--font-size__p);
     border-radius: var(--border-radius__px);
     border: .2rem solid var(--background-color__blue);
+    margin-top: calc(var(--margin__default)/2.5);
 }
 
 #main-container div a:hover {
