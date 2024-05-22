@@ -55,18 +55,18 @@ p {font-size: var(--font-size__p);}
     height: 100%;
 }
 
-#header-container #__btn-home {
+#header-container .__btn-home {
     height: var(--header-height);
     width: calc(var(--header-height)*2);
     display: flex;
 }
 
-#header-container #__btn-home img {
+#header-container .__btn-home img {
     height: 100%;
     width: 100%;
 }
 
-#header-container #__btn-home:hover img {
+#header-container .__btn-home:hover img {
     height: 101%;
     width: 101%;
 }
