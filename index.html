@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LF Digital oferece serviços completos de desenvolvimento de aplicativos móveis e sites web personalizados para empresas de todos os tamanhos. Transforme suas ideias em lucro com nossas soluções digitais inovadoras. Contamos com uma equipe de especialistas para ajudar sua empresa a crescer online, aumentando sua presença digital e otimizando seus processos de negócios. Venha desenvolver seu app ou site conosco e alcance novos patamares de sucesso.">
     <link rel="stylesheet" href="resources/styles/normalize.css">
+    <link rel="stylesheet" href="resources/styles/contactForm.css">
     <link rel="stylesheet" href="resources/styles/indexSheet.css">
     <link rel="stylesheet" href="resources/styles/scrollStyle.css">
     <script src="resources/scripts/indexScript.js"></script>
 </head>
 <body>
+    <a href="https://wa.me/5562985305035" target="_blank" id="whatsapp_button" title="Acessar o nosso whatsapp"><img src="resources/images/whatsapp_icon.png" alt="icone do whatsapp"></a>
     <header id="header-container">
         <nav class="header-container__nav">
             <a href="#" title="Ir para a página inicial" class="__btn-home"><img src="resources/images/icon.png" alt="icone da página" class="__btn-home"></a>
             <ul>
-                <li><a href="#" title="Veja sobre nossos serviços" class="servicesButton"><img src="resources/images/objectIcon.png" alt="imagem do botão serviços">serviços</a></li>
-                <li><a href="#" title="Veja quem somos" class="aboutButton"><img src="resources/images/aboutIcon.png" alt="imagem do botão sobre">sobre</a></li>
-                <li><a href="#" title="Acesse nossos contatos" class="contactButton"><img src="resources/images/contactIcon.png" alt="imagem do botão contatos">contatos</a></li>
+                <li><a href="#servicesContainer" title="Veja sobre nossos serviços" class="servicesButton"><img src="resources/images/objectIcon.png" alt="imagem do botão serviços" class="servicesButton">serviços</a></li>
+                <li><a href="#aboutContainer" title="Veja quem somos" class="aboutButton"><img src="resources/images/aboutIcon.png" alt="imagem do botão sobre" class="aboutButton">sobre</a></li>
+                <li><a href="#contactContainer" title="Acesse nossos contatos" class="contactButton"><img src="resources/images/contactIcon.png" alt="imagem do botão contatos" class="contactButton">contatos</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div id="main-container">
-            <img src="resources/images/image-header.png" alt="imagem fundo do header" id="__image-header">
             <div class="__div-main-container">
                 <div class="main-container__h1-div">
                     <h1 class="main-container__h1">Desenvolvimento de aplicativos e sites para o crescimento do seu negócio.</h1>
                 </div>
-                <a href="#">solicitar orçamento</a>
+                <a href="#contactContainer">solicitar orçamento</a>
             </div>
         </div>
-        <h1 id="main-title">nossos serviços</h1>
+        <div id="servicesContainer" style="padding: 0;"></div>
+        <h1 class="title-section">nossos serviços</h1>
         <section id="section-services">
             <article>
                 <img src="resources/images/iconCode.png" alt="imagem mostrando notebook com código">
@@ -49,7 +51,79 @@
                 <p>Desenvolvemos aplicativos e sites web responsivos, focando na qualidade para garantir uma experiência excepcional em qualquer dispositivo.</p>
             </article>
         </section>
+        <div id="aboutContainer" style="padding: 0;"></div>
+        <h1 class="title-section title-section-right__border testScrollText">Sobre <span>LF Digital</span></h1>
+        <article class="article-about">
+            <img src="resources/images/personProgramming.jpg" alt="icone da lf digital." style="
+                width: 20%;
+                float: left;
+                margin: calc(var(--margin__default)/2);
+            ">
+            <p style="
+                float: left;
+                line-height: 4rem;
+                text-align: left;
+                width: 40%;
+            ">Fundada em 2024 na região de Porangatu, Goiás, a LF Digital surgiu com o objetivo de impulsionar a tecnologia local e fornecer soluções inovadoras em programação e desenvolvimento de software. Criada por dois jovens talentosos formandos em áreas de tecnologia, a empresa rapidamente se destacou pela sua dedicação à qualidade e pelo compromisso com a excelência. Nossa missão é transformar ideias em realidade através de um desenvolvimento ágil e eficiente, sempre focando nas necessidades específicas de cada cliente.</p>
+        </article>
+        <article class="article-about">
+            <img src="resources/images/personProgramming2.jpg" alt="icone da lf digital." style="
+                clear: both;
+                width: 20%;
+                float: inline-end;
+                margin: calc(var(--margin__default)/2);
+            ">
+            <p style="
+                float: right;
+                line-height: 4rem;
+                text-align: right;
+                width: 40%;
+            ">Reconhecida pela qualidade dos serviços e pela garantia oferecida em cada projeto, a LF Digital busca constantemente superar as expectativas dos seus clientes. Com uma equipe altamente capacitada e uma abordagem personalizada, trabalhamos para oferecer soluções tecnológicas que agreguem valor e promovam o crescimento sustentável dos negócios de nossos parceiros. Acreditamos que a inovação é a chave para o sucesso e estamos sempre à frente das tendências para proporcionar as melhores soluções em software e tecnologia.</p>
+        </article><br style="clear: both;">
+        <div id="contactContainer" style="padding: 0;"></div>
+        <h1 class="title-section testScrollText">entre em contato</h1>
+        <div class="container-contacts">
+            <form action="enviar_contato.php" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="XX-XXXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </main>
+    <footer>
+        <section style="
+            display: flex;
+            margin-top: var(--margin__default);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--background-color__header);
+            width: 100%;
+            padding: calc(var(--margin__default)/2); 
+        ">
+            <p class="pFooter" style="font-weight: bold;">Copyright © LF Digital</p>
+            <p class="pFooter">CNPJ: 51.845.362.0001/14</p>
+        </section>
+    </footer>
 </body>
-
 </html>

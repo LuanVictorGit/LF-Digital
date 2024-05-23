@@ -45,6 +45,24 @@ h3 {font-size: var(--font-size__h3);}
 p {font-size: var(--font-size__p);}
 
 /* formatação do header */
+
+#whatsapp_button {
+    position: fixed;
+    width: 4.5vw;
+    right: 0;
+    bottom: 0;
+    margin: calc(var(--margin__default)/2.5);
+    z-index: 1;
+}
+
+#whatsapp_button img {
+    width: 100%;
+}
+
+#whatsapp_button:hover img {
+    width: 105%;
+}
+
 #header-container {
     position: fixed;
     top: 0;
@@ -130,11 +148,10 @@ p {font-size: var(--font-size__p);}
 }
 
 #main-container #__image-header {
-    width: 65vw;
+    width: 80%;
 }
 
 #main-container .__div-main-container {
-    position: absolute;
     margin: auto;
     right: 0;
     left: 0;
@@ -144,6 +161,9 @@ p {font-size: var(--font-size__p);}
     flex-direction: column;
     justify-content: center;
     align-items: left;
+    background-image: url(../../resources/images/image-header.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .main-container__h1 {
@@ -190,16 +210,27 @@ main h1,h2,h3,p,a {
     text-align: center;
 }
 
-#main-title {
+.title-section {
+    width: fit-content;
+    height: fit-content;
+    border-left: .5rem solid var(--background-color__blue);  
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
     margin: auto;
     right: 0;
     left: 0;
     margin-top: calc(var(--margin__default)*2);
-    text-transform: capitalize;
-    border-left: .5rem solid var(--background-color__blue);
-    width: fit-content;
-    padding: 1.5rem 1rem 1.5rem 1rem;
-    margin-bottom: 1rem;
+}
+
+span {
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.title-section-right__border {
+    border: none;
+    border-right: .5rem solid var(--background-color__blue);   
 }
 
 
@@ -255,6 +286,17 @@ main h1,h2,h3,p,a {
     border-bottom: .1rem solid var(--background-color__blue);
 }
 
+.article-about {
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 80%;
+}
+
+.pFooter {
+    font-size: calc(var(--font-size__p)/1.5);
+}
+
 /* formatação da tela para todos os dispositivos */
 @media screen and (max-width: 1280px) {
     :root {
@@ -279,6 +321,10 @@ main h1,h2,h3,p,a {
     #section-services article {
         width: 80%;
         height: 65rem;
+    }
+
+    #whatsapp_button {
+        width: 12vw;
     }
 
 }
@@ -323,4 +369,5 @@ main h1,h2,h3,p,a {
         width: 80%;
         height: 55rem;
     }
+
 }
