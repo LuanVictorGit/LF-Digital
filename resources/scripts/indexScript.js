@@ -24,7 +24,7 @@ function enable() {
             case "servicesButton":
                 e.preventDefault();
                 yFrom = window.pageYOffset;
-                yTo = 1030;
+                yTo = 1020;
                 moveScroll();
                 break;
             default:
@@ -47,7 +47,7 @@ function updateMainText() {
         i++;
         setTimeout(() => {
             updateMainText();
-        }, 15);
+        }, 30);
     } else {
         textMainBackground.classList.add("main-container__h1_effect");
         setTimeout(() => {
