@@ -1,5 +1,4 @@
 window.onload = enable;
-var yFrom = 0, yTo = 0;
 function enable() {
     window.addEventListener("scroll", function () {
         var headerDefault = document.getElementsByClassName("header-container__nav")[0];
@@ -12,7 +11,6 @@ function enable() {
     updateMainText();
 }
 
-let textDefault = "";
 let i = 0;
 function updateMainText() {
     const textMainBackground = document.getElementsByClassName("main-container__h1")[0];
